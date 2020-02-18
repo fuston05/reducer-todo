@@ -6,7 +6,7 @@ export const Form = ({value, handleSubmit, handleChange}) => {
       <form onSubmit= {handleSubmit}>
         <label>Todo Item: &nbsp;&nbsp;
           <input 
-            onChange= {handleChange}
+            onChange= {e => {handleChange(e)}}
             value= {value}
             type= 'text'
             id= 'text'

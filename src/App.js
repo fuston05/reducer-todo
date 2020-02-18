@@ -15,7 +15,10 @@ function App() {
   //functions
   const handleSubmit= e => {
     e.preventDefault();
-    dispatch({type: 'addItem'});
+    dispatch({type: 'addItem', payload: {
+      completed: 'false',
+      id: Date.now()
+    }});
     console.log('state text:', state.text);  
     console.log('state todos:', state.todos);  
   }//end handleSubmit
@@ -25,17 +28,21 @@ function App() {
     console.log(e.target.value);
   }//end handleChange
 
-  const handleCompleted= e => {
+  const handleCompleted= (e, completed) => {
     const targetId= e.target.id;
-    console.log('id: ', e.target.id);
-    console.log('completed: ', e.target.completed);
-    e.target.classList.add('completed');
+    if(e.target.classList.contains('completed')){
+      e.target.classList.remove('completed')
+    }else{
+      e.target.classList.add('completed');
+    }
     dispatch({ type: 'complete', payload: {id: targetId} });
+    // console.log('completed: ', e.target.completed);
   }// end handleCompleted
 
   return (
     <div className="App">
       <h1>Todo List</h1>
+      {console.log('state todos: ', state.todos)}
       <Form 
         value= {state.inputField}
         handleSubmit= {handleSubmit} 
