@@ -1,0 +1,28 @@
+.itemCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  padding: 0;
+  height: 40px;
+  width: 100%;
+  max-width: 1140px;
+  margin: 2% auto;
+}
+
+.item {
+  color: cornflowerblue;
+  height: 100%;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
+
+h1.completed {
+  text-decoration: line-through;
+  color: red
+}
