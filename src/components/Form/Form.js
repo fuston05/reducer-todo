@@ -1,6 +1,8 @@
 import React from 'react';
 
-export const Form = ({value, handleSubmit, handleChange}) => {
+export const Form = ({value, handleSubmit, handleChange, clearCompleted}) => {
+  
+
   return (
     <div>
       <form onSubmit= {handleSubmit}>
@@ -10,11 +12,15 @@ export const Form = ({value, handleSubmit, handleChange}) => {
             value= {value}
             type= 'text'
             id= 'text'
+            className= 'text'
             name= 'text'
-            placeholder= 'Todo'
+            placeholder= 'Take out trash'
           />
         </label>
-        <button type= 'submit'>Add Item</button>
+        <button disabled className= 'submit' type= 'submit'>Add Item</button>
+        <button 
+          onClick= {clearCompleted}
+          type= 'button'>Clear Completed</button>
       </form>
     </div>
   )
