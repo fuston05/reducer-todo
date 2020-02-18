@@ -1,8 +1,10 @@
 import React from 'react';
 
+//styles
+import './FormStyles.scss'
+
 export const Form = ({value, handleSubmit, handleChange, clearCompleted}) => {
   
-
   return (
     <div>
       <form onSubmit= {handleSubmit}>
