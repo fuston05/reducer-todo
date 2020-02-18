@@ -1,12 +1,13 @@
 import React from 'react';
 
-export const Form = ({handleSubmit, handleChange}) => {
+export const Form = ({value, handleSubmit, handleChange}) => {
   return (
     <div>
       <form onSubmit= {handleSubmit}>
         <label>Todo Item: &nbsp;&nbsp;
           <input 
             onChange= {handleChange}
+            value= {value}
             type= 'text'
             id= 'text'
             name= 'text'
