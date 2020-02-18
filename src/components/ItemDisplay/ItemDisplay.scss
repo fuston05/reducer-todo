@@ -1,4 +1,4 @@
-.itemCont{
+.itemCont {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,21 +8,21 @@
   height: 40px;
   width: 100%;
   max-width: 1140px;
-  margin: 2% 0;
+  margin: 2% auto;
 }
 
-.item{
+.item {
   color: cornflowerblue;
   height: 100%;
   width: 100%;
 
-  &:hover{
+  &:hover {
     cursor: pointer;
     opacity: 0.8;
   }
 }
 
-h1.completed{
+h1.completed {
   text-decoration: line-through;
   color: red
 }
